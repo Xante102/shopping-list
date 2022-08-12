@@ -1,0 +1,39 @@
+<section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md">
+  <h2 class="text-lg font-semibold text-gray-700 capitalize">Add New Item</h2>
+  
+  <form (submit)="onSubmit()" [formGroup]="addList" action="">
+      <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+          <div>
+              <label class="text-gray-700" for="item_name">Item Name</label>
+              <input name="item_name" formControlName="item_name" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
+          </div>
+
+          <div>
+              <label class="text-gray-700" for="category">Category</label>
+              <select name="category" formControlName="category" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
+                <option selected disabled>Selct Category</option>
+                <option value="Meat & Fish">Meat & Fish</option>
+                <option value="Fresh Produce">Fresh Produce</option>
+                <option value="Grains & Bread">Grains & Bread</option>
+                <option value="Condiments">Condiments</option>
+                <option value="Canned Goods">Canned Goods</option>
+                <option value="Dairy & Eggs">Dairy & Eggs</option>
+              </select>
+          </div>
+
+          <div>
+              <label class="text-gray-700" for="price">Price</label>
+              <input name="price" formControlName="price"  type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
+          </div>
+
+          <div>
+              <label class="text-gray-700" for="quantity">Quantity</label>
+              <input name="quantity" formControlName="quantity" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring">
+          </div>
+      </div>
+
+      <div class="flex justify-end mt-6">
+          <button type="submit" class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-400 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Save</button>
+      </div>
+  </form>
+</section>
